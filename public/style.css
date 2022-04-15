@@ -1,0 +1,258 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* html>body .card-wrapper {
+    height: auto;
+} */
+
+
+.nav-wrapper {
+    background-color: rgb(26, 202, 143);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+.second-wrapper {
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    float: left;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.links {
+    margin-left: 60%;
+}
+
+.links i {
+    margin-left: 5px;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+}
+
+.links li {
+    margin-left: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+}
+
+.welcome {
+    height: 340px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/food.jpg') no-repeat;
+    background-size: cover;
+    color: rgb(235, 235, 235);
+    padding-top: 100px;
+}
+
+.welcome h2 {
+    font-weight: lighter;
+    text-align: center;
+}
+
+.search {
+    margin-left: 20%;
+    background-color: white;
+    width: fit-content;
+    padding: 25px;
+    color: rgb(139, 136, 136);
+    margin-top: 60px;
+}
+
+.search input {
+    color: rgb(139, 136, 136);
+    outline: none;
+    border: solid rgb(185, 181, 181) 1px;
+    padding: 5px;
+}
+
+.submit-btn input {
+    background-color: rgb(26, 202, 143);
+    border: none;
+    padding: 5px;
+    color: white;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 100px;
+    font-size: larger;
+}
+
+.icons a{
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    margin-left: 202px;
+    margin-right: 202px;
+
+    min-height: calc(100vh - 115px - 0px);
+}
+
+main h3 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.card-wrapper {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    position: relative;
+}
+
+.card {
+    border: solid 1px rgb(173, 171, 171);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgb(131, 126, 126);
+}
+
+#qty {
+    margin-top: 5px;
+    width: 30px;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons a {
+    background-color: rgb(26, 202, 143);
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 29px;
+    padding-right: 29px;
+    font-size: small;
+}
+
+.buttons button {
+    background-color: rgb(26, 202, 143);
+    border: none;
+    padding: 5px;
+    color: white;
+    width: 70px;
+    cursor: pointer;
+    font-size: small;
+}
+
+
+/*Cart coding*/
+.content {
+    display: grid;
+    grid-template-columns: auto 50%;
+    margin-top: 10px;
+}
+
+.btn button {
+    padding: 7px;
+}
+
+.btn {
+    margin-left: auto;
+    margin-right: end;
+}
+
+.content button {
+    border: none;
+    background-color: rgb(26, 202, 143);
+    color: white;
+    cursor: pointer;
+}
+
+.card button {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+#card a {
+    width: 80px;
+    background-color: rgb(26, 202, 143);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#card p {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#card-wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.cart-details {
+    width: 100%;
+    text-align: right;
+}
+
+.cart-details h3 {
+    font-weight: lighter;
+}
+
+
+
+/* details page */
+
+#card-details {
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+#card-details h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+#test {
+    display: none;
+}
+
+
+#footer {
+    /* position: absolute;
+    bottom: 0;
+    width: 100%;          */
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %> 
+
+<body>
+    
+    <header>
+        <%- include('./partials/nav') %> 
+    </header>
+
+    <main>
+
+        <br><br><br><br>
+
+        <h3 style="font-weight: lighter;">Details</h3>
+
+        <div class="card" id="card-details">
+            <h4><%= cartFood.title %> </h4>
+            <p>Price: R<%= cartFood.cost %> </p>
+            <p>Ingredients: <%= cartFood.ingredients %></p>
+            <p>Item ID: <%= cartFood._id %></p>
+        </div>
+        </div>
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>

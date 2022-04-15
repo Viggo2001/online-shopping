@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %> 
+
+<body>
+    <header>
+        <%- include('./partials/nav') %> 
+    </header>
+
+    <br><br><br><br>
+
+    <main>
+
+        <div class="content">
+            <h2 style="font-weight: lighter;">Cart</h2>
+
+            <div class="btn">
+                <button>Checkout</button>
+            </div>
+            
+            <div class="card-wrapper" id="card-wrapper">
+                <!-- <%= qtyHolder = 0; %>  -->
+                <!-- <%= totalCost = 0 %> -->
+                <% if (cartDetails.length > 0) { %>
+                    <% cartDetails.forEach((item, idx, arr) => { %> 
+                        <!-- <%= qtyHolder += item.qty; %> -->
+                        <!-- <%= totalCost += item.cost * item.qty %> -->
+                        <div class="card" id="card">
+                            <h4><%= item.title %> </h4>
+                            <p>R<%= item.cost %> </p>
+                            <p>Qty:<%= item.qty %></p>
+                            <p>Added at: <%= item.createdAt %></p><br>
+                            <a class="delete" data-doc="<%= item._id %>"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                    <% }); %> 
+                <% } else { %>
+                    <h4>No Items Available</h4>
+                <% } %> 
+            </div>
+
+            <div class="cart-details">
+                <h3>Total Number of Items: <%= qtyHolder %></h3>
+                <h3 id="tt">Total Price: R<%= totalCost %></h3>
+            </div>
+        </div>
+
+        <script>
+
+            const trashcan = document.querySelectorAll('a.delete');
+
+            trashcan.forEach((element, index, array) => {
+                trashcan.item(index).addEventListener('click', (e) => {
+                
+                    const url = `/cart/${trashcan.item(index).dataset.doc}`;
+
+                    fetch(url, {
+                        method: 'DELETE'
+                    })
+                        .then((response) => response.json())    // response is the object from the server
+                        .then((data) => window.location.href = '/cart') // data is the object we can use parsed by the upper then()
+                        .catch((err) => console.log(err));
+                    });
+            });
+            
+        </script>
+
+    </main>
+    
+    <%- include('./partials/footer') %>
+</body>
+</html>

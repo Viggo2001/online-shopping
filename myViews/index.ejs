@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %> 
+
+<body>
+    
+    <header>
+        
+        <%- include('./partials/nav') %> 
+
+        <div class="welcome">
+            <h2>Place Your Order and We'll Deliver</h2>
+            <div class="search">
+                <form action="">
+                    <!-- <label for="">Search for food</label><br> -->
+                    <input type="text" placeholder="Search for food"> <br>
+                    <div class="submit-btn">
+                        <input type="submit" value="SEARCH">
+                    </div>
+                </form>
+            </div>
+
+            <div class="icons">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-github"></i></a>
+                <a href=""><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <h3 style="font-weight: lighter;">Food Available in Store</h3>
+
+        <div class="card-wrapper">
+
+            <% if (food.length > 0) { %>
+                <% food.forEach((item, idx, arr) => { %> 
+                    <div class="card">
+                        <h4><%= item.title %> </h4>
+                        <p>R<%= item.cost %> </p>
+
+                        <form action="/cart/add" method="POST">
+                            <input type="text" name="title" value="<%= item.title %>" id="test">
+                            <input type="text" name="cost" value="<%= item.cost %>" id="test">
+
+                            <label for="">Qty:</label>
+                            <input type="number" name="qty" min="1" id="qty" value="1">
+
+                            <div class="buttons">
+                                <a href="/food/<%= item._id %>">details</a>
+                                <button id="add-btn">add</button>
+                            </div>
+                        </form>
+                    </div>
+                <% }); %> 
+            <% } else { %>
+                <h4>No Items Available</h4>
+            <% } %> 
+        </div>
+
+        
+
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>
