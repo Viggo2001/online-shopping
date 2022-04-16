@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Food = require('./models/Food');
 const Cart = require('./models/cart-items');
 
-const url = 'mongodb+srv://tom123:Graphic4@mynewcluster.coxgo.mongodb.net/food-cluster?retryWrites=true&w=majority';
+const url = 'mongodb+srv://username:password@mynewcluster.coxgo.mongodb.net/food-cluster?retryWrites=true&w=majority';
 mongoose.connect(url)
     .then((result) => app.listen(3000))
     .catch((err) => console.log(err));
