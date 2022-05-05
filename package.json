@@ -9,8 +9,12 @@
   "author": "Onodwa Siyotula",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "mongoose": "^6.2.11"
+    "express-validator": "^6.14.0",
+    "mongoose": "^6.2.11",
+    "validator": "^13.7.0"
   }
 }
